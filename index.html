@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Basic HTML Page</title>
+    <script>
+    // Function to automatically click the link after a delay (optional)
+    function autoClickLink() {
+        document.getElementById('openlink').click();
+    }
+
+    // Call the function after the page loads
+    window.onload = function() {
+        setTimeout(autoClickLink, 1000); // Click after 1 second
+    };
+</script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,7 +50,7 @@
 
     <main>
         <p>This is a basic HTML page template. You can modify the content here to suit your needs.</p>
-        <a href="intent://stackoverflow.com#Intent;scheme=http;package=com.android.chrome;end">
+        <a id="openlink" href="intent://stackoverflow.com#Intent;scheme=http;package=com.android.chrome;end">
 Click here to visit Example.com</a>
 
      <a href="https://www.cat.com/" target="_blank">Open Your URL</a>
