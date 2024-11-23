@@ -1,64 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Basic HTML Page</title>
-    <script>
-    // Function to automatically click the link after a delay (optional)
-    function autoClickLink() {
-        document.getElementById('openlink').click();
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video ID Page</title>
+  <script>
+    // This function will extract the video ID from the URL
+    function getVideoId() {
+      const path = window.location.pathname.split('/').filter(Boolean);
+      return path[path.length - 1];  // The last segment is the video ID
     }
 
-    // Call the function after the page loads
-    window.onload = function() {
-        setTimeout(autoClickLink, 1000); // Click after 1 second
+    window.onload = () => {
+      const videoId = getVideoId();
+      document.getElementById('video-id').innerText = `Video ID: ${videoId}`;
     };
-</script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-
-    <main>
-        <p>This is a basic HTML page template. You can modify the content here to suit your needs.</p>
-        <a id="openlink" href="intent://stackoverflow.com#Intent;scheme=http;package=com.android.chrome;end">
-Click here to visit Example.com</a>
-
-     <a href="https://www.cat.com/" target="_blank">Open Your URL</a>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
+  <h1>Video Page</h1>
+  <p id="video-id">Loading video ID...</p>
 </body>
 </html>
