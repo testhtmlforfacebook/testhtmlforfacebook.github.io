@@ -3,22 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video ID Page</title>
+  <title>Page Not Found</title>
   <script>
-    // This function will extract the video ID from the URL
-    function getVideoId() {
-      const path = window.location.pathname.split('/').filter(Boolean);
-      return path[path.length - 1];  // The last segment is the video ID
-    }
-
-    window.onload = () => {
-      const videoId = getVideoId();
-      document.getElementById('video-id').innerText = `Video ID: ${videoId}`;
-    };
+    // Redirect to index.html to handle the route with JavaScript
+    window.location.replace("/index.html");
   </script>
 </head>
 <body>
-  <h1>Video Page</h1>
-  <p id="video-id">Loading video ID...</p>
+  <h1>Redirecting...</h1>
 </body>
 </html>
