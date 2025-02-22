@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video ID Page</title>
+</head>
+<body>
+  <h1>Video Page</h1>
+  <p id="video-id">Loading video ID...</p>
+  <script type='text/javascript' src='//complainguyseaweed.com/53/1e/81/531e81f935390690de9aa8b0dc58f595.js'></script>
+</body>
+</html>
